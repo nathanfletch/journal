@@ -30,3 +30,26 @@ The best way to reach me is by [email](mailto:nathan.fletcher@gmail.com).
 The MIT License (MIT)
 
 Copyright (c) 2021 Nathan Fletcher
+
+<!-- Journal
+  properties:
+    entries: {}
+  methods:
+    addEntry
+    deleteEntry
+    editEntry -->
+
+Entry 
+  properties:
+    title
+    body
+    date
+  methods:
+    numWords - split entry (body) into an array, return length
+    numVowels - .split("")  - regex - [a,e,i,o,u].includes (.filter)
+    numConsonants - same step
+    getTeaser - .split(".?!") for the first .slice(0,8)
+    /[.!?]/g
+
+UI
+(ui)display all entries
