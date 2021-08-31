@@ -30,8 +30,7 @@ Entry.prototype.numVowels = function () {
 }
 
 Entry.prototype.numConsonants = function () {
-  return this.body.split("").filter(char => !/[aeiou]/gi.test(char));
+  return this.body.match(/[^aeiou]/gi).join("").match(/[a-z]/gi);
 }
-
 
 // return this.body.split(/[aeiou]/gi)
