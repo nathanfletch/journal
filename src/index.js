@@ -9,7 +9,6 @@ $(document).ready(function() {
     event.preventDefault();
     const inputTitle = $("#title").val().trim();
     const inputBody = $("#body").val().trim();
-    console.log(inputBody);
     const entry = new Entry(inputTitle, inputBody);
     let totalWords = entry.numWords();
     $("#title-display").text(inputTitle);
