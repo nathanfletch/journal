@@ -33,4 +33,9 @@ Entry.prototype.numConsonants = function () {
   return this.body.match(/[^aeiou]/gi).join("").match(/[a-z]/gi);
 }
 
+Entry.prototype.getTeaser = function() {
+  const firstSentence = this.body.split(/([.?!])/gi);
+  console.log(firstSentence);
+  return firstSentence[0] + firstSentence[1];
+}
 // return this.body.split(/[aeiou]/gi)
