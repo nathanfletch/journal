@@ -35,7 +35,7 @@ Entry.prototype.numConsonants = function () {
 
 Entry.prototype.getTeaser = function() {
   const firstSentence = this.body.split(/([.?!])/gi);
-  console.log(firstSentence);
-  return firstSentence[0] + firstSentence[1];
+  const firstSentenceWords = firstSentence[0].split(" ");
+  if(firstSentenceWords.length > 8) return firstSentenceWords.slice(0,8).join(" ");
+    else return firstSentence[0] + firstSentence[1];
 }
-// return this.body.split(/[aeiou]/gi)

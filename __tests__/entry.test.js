@@ -29,6 +29,11 @@ describe("Entry", () => {
   });
 
   test("should correctly return the first sentence of the body", () => {
-    expect(myEntry.getTeaser()).toEqual("This is the body of the journal entry, isn't it?");
+    myEntry.body = "This is the body. It's super interesting and stuff."
+    expect(myEntry.getTeaser()).toEqual("This is the body.");
+  });
+  
+  test("should only return the first 8 words of the body if the first sentence is over 8 words", () => {
+    expect(myEntry.getTeaser()).toEqual("This is the body of the journal entry,");
   });
 });
